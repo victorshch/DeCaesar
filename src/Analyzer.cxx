@@ -26,9 +26,6 @@ Analyzer::Analyzer(const Statistics &referenceStatistics, const Statistics &text
 	std::sort(referenceAlphabet.begin(), referenceAlphabet.end(), CompareByStatistics(&referenceStatistics));
 	std::sort(sortedAlphabet.begin(), sortedAlphabet.end(), CompareByStatistics(&textStatistics));
 	
-	IO::writeVerboseMessage("Sorted reference alphabet : \t" + referenceAlphabet.toStdString());
-	IO::writeVerboseMessage("Sorted text alphabet : \t" + sortedAlphabet.toStdString());
-	
 	m_key.setPermutation(referenceAlphabet, sortedAlphabet);
 	
 	m_strategy.setMutationCandidates(sortedAlphabet);

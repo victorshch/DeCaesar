@@ -88,10 +88,6 @@ void AlphabetPermutation::initAlphabet() {
 		}
 		//¸
 		m_alphabet.push_back(QChar(1105u));
-		
-		IO::writeVerboseMessage(
-				"Alphabet: " + m_alphabet.toStdString());
-		//m_alphabet = "אבגדהו¸זחטיךכלםמןנסעףפץצקרשתûü‎‏ÿ";
 	}
 }
 
