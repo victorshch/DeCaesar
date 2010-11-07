@@ -124,5 +124,5 @@ double Analyzer::objectiveFunction(const AlphabetPermutation &permutation) const
 	}
 	
 	// Коэффициент подбирался вручную
-	return resultBigramm + 6.0 * resultTrigramm;
+	return resultBigramm + 10.0 * resultTrigramm;
 }
