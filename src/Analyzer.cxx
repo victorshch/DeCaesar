@@ -32,6 +32,12 @@ Analyzer::Analyzer(const Statistics &referenceStatistics, const Statistics &text
 	m_key.setPermutation(referenceAlphabet, sortedAlphabet);
 	
 	m_strategy.setMutationCandidates(sortedAlphabet);
+	
+	switch(Settings::getInstance()->language()) {
+		case Settings::English: factor = 10.0; break;
+		case Settings::Russian: factor = 3.0; break;
+		default: factor = 6.0; break;
+	}
 }
 
 void Analyzer::run() {
@@ -111,7 +117,7 @@ double Analyzer::objectiveFunction(const AlphabetPermutation &permutation) const
 			for(int k = 0; k < alphabetCount; k++) {
 				str3[0] = alphabet[i];
 				str3[1] = alphabet[j];
-				str3[2] = alphabet[k];
+ 				str3[2] = alphabet[k];
 				
 				encryptedStr3[0] = encryptedStr2[0];
 				encryptedStr3[1] = encryptedStr2[1];
@@ -123,6 +129,5 @@ double Analyzer::objectiveFunction(const AlphabetPermutation &permutation) const
 		}
 	}
 	
-	// Коэффициент подбирался вручную
-	return resultBigramm + 10.0 * resultTrigramm;
+	return resultBigramm + factor * resultTrigramm;
 }

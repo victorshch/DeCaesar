@@ -26,6 +26,8 @@ private:
 	AlphabetPermutation m_key;
 	MutationStrategy m_strategy;
 	
+	double factor;
+	
 	double objectiveFunction(const AlphabetPermutation& permutation) const;
 };
 

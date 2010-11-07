@@ -40,6 +40,7 @@ void performInteractiveAction(IO& io, AlphabetPermutation& key, const QString& e
 	IO::writeToScreen("");
 	IO::writeToScreen("Decrypted text : ");
 	IO::writeToScreen(decryptedText);
+	IO::writeToScreen("");
 	while(true) {
 		IO::writeToScreen("");
 		IO::writeToScreen("Enter x to save and exit, f to flip two characters in text");
@@ -63,6 +64,7 @@ void performInteractiveAction(IO& io, AlphabetPermutation& key, const QString& e
 			IO::writeToScreen("");
 			IO::writeToScreen("Decrypted text : ");
 			IO::writeToScreen(decryptedText);			
+			IO::writeToScreen("");
 		} else {
 			IO::writeToScreen("Incorrect command");
 			continue;
@@ -131,7 +133,8 @@ int main(int argc, char *argv[])
 			performInteractiveAction(io, key, encryptedText, decryptedText);
 		}
 		
-		io.output()<<decryptedText;
+		io.output()<<decryptedText<<'\n';
+		io.output().flush();
 		
 		IO::writeVerboseMessage("Decrypted text written to output.");
 	} catch(UserError e) {

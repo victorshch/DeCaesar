@@ -10,9 +10,11 @@ QTextStream* IO::m_stderr = 0;
 IO::IO(Settings *settings): m_inputFile(0), m_outputFile(0)
 {
 	m_standardInput = new QTextStream(stdin, QIODevice::ReadOnly);
+	m_standardInput->setCodec(QTextCodec::codecForName("UTF-8"));
 	
 	if(m_stderr == 0) {
 		m_stderr = new QTextStream(stderr, QIODevice::WriteOnly);
+		m_stderr->setCodec(QTextCodec::codecForName("UTF-8"));
 	}
 	
 	if(settings->inputFile().size() > 0) {
