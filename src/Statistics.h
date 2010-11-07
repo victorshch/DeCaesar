@@ -23,12 +23,6 @@ public:
 	
 	void analyzeText(const QString& text);
 	
-//	double statLetter(QChar letter) const;
-//	double statBigramm(QChar letter1, QChar letter2) const;
-//	double statBigramm(const QString& bigramm) const;
-//	double statTrigramm(QChar letter1, QChar letter2, QChar letter3) const;
-//	double statTrigramm(const QString& trigramm) const;
-	
 	void calculateStatistics();
 	double statistics(const QString& str) const;
 	double statistics(QChar c) const;
