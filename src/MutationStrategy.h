@@ -6,6 +6,7 @@
 #include "Statistics.h"
 #include "AlphabetPermutation.h"
 
+// Стратегия изменения перестановки алфавита при минимизации целевой функции
 class MutationStrategy
 {
 public:

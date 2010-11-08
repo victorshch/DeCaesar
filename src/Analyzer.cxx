@@ -82,7 +82,7 @@ void Analyzer::run() {
 	IO::writeVerboseMessage("Maximum number of iterations reached, finishing minimization");
 }
 
-// Целевая функция -- взвешенная сумма отклонений по биграммам и триграммам
+// Р¦РµР»РµРІР°СЏ С„СѓРЅРєС†РёСЏ -- РІР·РІРµС€РµРЅРЅР°СЏ СЃСѓРјРјР° РѕС‚РєР»РѕРЅРµРЅРёР№ РїРѕ Р±РёРіСЂР°РјРјР°Рј Рё С‚СЂРёРіСЂР°РјРјР°Рј
 double Analyzer::objectiveFunction(const AlphabetPermutation &permutation) const {
 	double resultBigramm = 0;
 	double resultTrigramm = 0;

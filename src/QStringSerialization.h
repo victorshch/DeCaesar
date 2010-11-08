@@ -9,6 +9,7 @@
 #include <QByteArray>
 #include <QString>
 
+// Объявления, необходимые для того, чтобы сериализация QString работала через boost_serialization
 namespace boost {
 	namespace serialization {
 		template<class Archive>

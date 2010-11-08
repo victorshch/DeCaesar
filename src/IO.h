@@ -10,6 +10,7 @@
 
 #include "Settings.h"
 
+// Класс для работы с вводом/выводом
 class IO
 {
 public:

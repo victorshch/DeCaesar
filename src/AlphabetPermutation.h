@@ -9,6 +9,7 @@
 #include "Settings.h"
 #include "Statistics.h"
 
+// Перестановка алфавита -- т. е. ключ шифра простой перестановки
 class AlphabetPermutation
 {
 	friend std::ostream& operator<<(std::ostream &stream, const AlphabetPermutation& p);

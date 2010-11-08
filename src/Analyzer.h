@@ -8,6 +8,7 @@
 #include "AlphabetPermutation.h"
 #include "MutationStrategy.h"
 
+// Анализатор -- подбирает перестановку алфавита, минимизирующую целевую функцию
 class Analyzer
 {
 public:
@@ -28,6 +29,7 @@ private:
 	
 	double factor;
 	
+	// Целевая функция
 	double objectiveFunction(const AlphabetPermutation& permutation) const;
 };
 

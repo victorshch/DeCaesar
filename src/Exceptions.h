@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include <string>
 
+// Класс исключения для случая, когда возможно нужно показать пользователю usage
 class UserError : public std::runtime_error {
 public:
 	UserError(const std::string& what, bool showHelp = false) : std::runtime_error(what), m_showHelp(showHelp) 

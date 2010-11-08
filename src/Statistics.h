@@ -14,6 +14,7 @@
 #include "Settings.h"
 #include "QStringSerialization.h"
 
+// Статистика по буквам, биграммам и триграммам. 
 class Statistics
 {
 public:

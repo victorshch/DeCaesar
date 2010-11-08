@@ -5,12 +5,13 @@
 
 #include <boost/program_options.hpp>
 
+// Набор настроек, которые пользователь указал в опциях командной строки
 class Settings
 {
 public:
 	static Settings* getInstance();
 	
-	// ������ ��������� � ��������� �� ������������
+	// Парсит аргументы и проверяет их корректность
 	void parse(int argc, char *argv[]);
 	
 	enum LanguageType { English = 0, Russian = 1 };

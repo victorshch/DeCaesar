@@ -86,7 +86,7 @@ void AlphabetPermutation::initAlphabet() {
 		for(uint i = 1072u; i <= 1103u; i++) {
 			m_alphabet.push_back(QChar(i));
 		}
-		//¸
+		//Ñ‘
 		m_alphabet.push_back(QChar(1105u));
 	}
 }
